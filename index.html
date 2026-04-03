@@ -6,104 +6,8 @@
     <title>atoue</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            background: #0a0a0a;
-            color: #e8e8e8;
-            font-family: 'Sora', sans-serif;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-
-        .grain {
-            position: fixed;
-            top: -50%; left: -50%;
-            width: 200%; height: 200%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 100;
-        }
-
-        .container {
-            text-align: center;
-            animation: fadeUp 1.2s ease-out;
-        }
-
-        .logo {
-            font-family: 'DM Mono', monospace;
-            font-weight: 300;
-            font-size: clamp(3rem, 8vw, 6rem);
-            letter-spacing: 0.3em;
-            text-transform: lowercase;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, #e8e8e8 0%, #888 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .tagline {
-            font-weight: 300;
-            font-size: clamp(0.85rem, 2vw, 1.05rem);
-            color: #555;
-            letter-spacing: 0.15em;
-            text-transform: lowercase;
-            margin-bottom: 3rem;
-        }
-
-        .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.6rem;
-            font-family: 'DM Mono', monospace;
-            font-size: 0.75rem;
-            color: #444;
-            letter-spacing: 0.08em;
-        }
-
-        .dot {
-            width: 6px;
-            height: 6px;
-            background: #2ecc71;
-            border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .links {
-            margin-top: 2.5rem;
-            display: flex;
-            gap: 2rem;
-            justify-content: center;
-        }
-
-        .links a {
-            font-family: 'DM Mono', monospace;
-            font-size: 0.8rem;
-            color: #555;
-            text-decoration: none;
-            letter-spacing: 0.05em;
-            transition: color 0.3s ease;
-        }
-
-        .links a:hover {
-            color: #e8e8e8;
-        }
-
-        @keyframes fadeUp {
-            0% { opacity: 0; transform: translateY(20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.4; }
-            50% { opacity: 1; }
-        }
-    </style>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/landing.css">
 </head>
 <body>
     <div class="grain"></div>
@@ -115,6 +19,7 @@
             <span>building in progress</span>
         </div>
         <div class="links">
+            <a href="resume.html">resume</a>
             <a href="https://github.com/fransiskusbudi" target="_blank">github</a>
             <a href="https://x.com/atouexyz" target="_blank">twitter</a>
             <a href="mailto:hi@atoue.io">contact</a>

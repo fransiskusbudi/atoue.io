@@ -1,0 +1,231 @@
+/* resume.css — resume page specific styles */
+body {
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+    animation: fadeUp 1.2s ease-out;
+}
+
+/* Top nav */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.top-nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #555;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.top-nav a:hover { color: #e8e8e8; }
+
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #151515;
+    border: 1px solid #222;
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #888;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+    color: #e8e8e8;
+    border-color: #444;
+}
+
+/* Intro */
+.intro { margin-bottom: 3rem; }
+
+.intro .name {
+    font-family: 'DM Mono', monospace;
+    font-weight: 300;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    letter-spacing: 0.1em;
+    background: linear-gradient(135deg, #e8e8e8 0%, #888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+}
+
+.intro .subtitle {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #555;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.2rem;
+}
+
+.intro .summary {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #888;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.intro .contact-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.intro .contact-links a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #444;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.intro .contact-links a:hover { color: #e8e8e8; }
+
+/* Section headers */
+.section-header {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #555;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+section { margin-bottom: 3rem; }
+
+/* Roles */
+.role { margin-bottom: 2rem; }
+
+.role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.role-title {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #e8e8e8;
+}
+
+.role-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+.role-company {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 0.3rem;
+}
+
+.role ul {
+    list-style: none;
+    padding: 0;
+}
+
+.role li {
+    font-size: 0.85rem;
+    font-weight: 300;
+    color: #888;
+    line-height: 1.7;
+    padding-left: 1rem;
+    position: relative;
+    margin-bottom: 0.3rem;
+}
+
+.role li::before {
+    content: '·';
+    position: absolute;
+    left: 0;
+    color: #444;
+}
+
+/* Education */
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.edu-item .degree {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.edu-item .degree strong {
+    color: #e8e8e8;
+    font-weight: 600;
+}
+
+.edu-item .year {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: #444;
+}
+
+/* Tech pills */
+.tech-category {
+    margin-bottom: 1rem;
+}
+
+.tech-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: #555;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+}
+
+.pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.pill {
+    background: #151515;
+    border: 1px solid #1a1a1a;
+    color: #888;
+    padding: 0.25rem 0.7rem;
+    border-radius: 3px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.03em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .role-header { flex-direction: column; gap: 0.1rem; }
+    .edu-item { flex-direction: column; gap: 0.1rem; }
+    .top-nav { flex-direction: column; gap: 0.8rem; align-items: flex-start; }
+    .intro .contact-links { flex-direction: column; gap: 0.5rem; }
+}

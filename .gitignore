@@ -22,3 +22,6 @@
 
 # Internal docs
 docs/
+
+# Local preview drafts
+preview.html
